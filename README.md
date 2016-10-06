@@ -6,6 +6,8 @@ The Coopener project is the first of many modules which will make up my
 Smart Home.
 For detailed description see: https://makeitbreakitfixit.com/2016/08/30/diy-home-automation-chicken-enclosure/
 
+NOTE: The latest version of the Python code will always work with the latest version of the Arduino code. Any other combination is untested.
+
 # Arduino
 The Arduino will listen on the serial link until it receives a command, it will 
 then execute the command and acknowledge this by responding with the same command
@@ -24,3 +26,6 @@ Which will look something like this:
 
 [Updated: 6 Sept, 2016]
 Project is currently incomplete and ongoing. Updates to follow as progress is made.
+
+[Updated: 6 Oct, 2016]
+Initial Python (v1.0alpha) uploaded. Main difference with this code to what I thought the script would exit at the end of each night and start again (via cron) every early morning. This turned out to be a bad idea, so instead the script now runs indefinitely and will get new twilight times each morning around 1am.
