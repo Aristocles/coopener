@@ -10,7 +10,7 @@ NOTE: The latest version of the Coopener Python code will always work with the l
 
 # Easy Summary
 ### Problem
-Chickens roam around the yard during the day, they instinctually go to bed in the chicken coop at night. After sunrise they come back out again. Rinse & repeat. The coop door needs to be closed every night to avoid possums from eating the chickens food and the foxes from eating the chickens. Some nights I forget to close the door, this is bad. Automating the opening/closing of the chicken coop door will solve the problem.
+Chickens roam around the yard during the day, they instinctively go to bed in the chicken coop at night. After sunrise they come back out again. Rinse & repeat. The coop door needs to be closed every night to avoid possums from eating the chickens food and the foxes from eating the chickens. Some nights I forget to close the door, this is bad. Automating the opening/closing of the chicken coop door will solve the problem.
 
 ### Solution
 1. Device mounted inside chicken coop will connect to the internet and know what time to open and close the door.
