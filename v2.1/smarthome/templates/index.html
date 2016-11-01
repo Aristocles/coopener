@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+  <tr>
+    <td>Connection Status</td>
+    <td>{% if connstate==True %} Connected: {{ ip }}:{{ port }} {% else %} Not connected {% endif %}</td>
+  </tr>
+  <tr>
+    <td>Door Status</td>
+    <td>{% if state %} {{ state }} {% endif %}</td>
+  </tr>
+  <tr>
+    <td>Open Time (seconds left)</td>
+    <td>{% if otime %} {{ otime }} {% endif %}</td>
+  </tr>
+  <tr>
+    <td>Close Time (seconds left)</td>
+    <td>{% if ctime %} {{ ctime }} {% endif %}</td>
+  </tr>
+  <tr>
+    <td>
+	<button onclick="location.href='http://{{ ip }}:{{ port}}/command?cmd=flip'">Flip Door</button>
+	<button onclick="location.href='http://{{ ip }}:{{ port}}/command?cmd=reconnect'">Reconnect</button>
+	<FORM>
+		<INPUT TYPE="button" onClick="history.go(0)" VALUE="Refresh">
+	</FORM>
+    </td>
+  </tr>
+
+{% endblock %}
+
