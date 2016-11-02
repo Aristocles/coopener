@@ -1,0 +1,1 @@
+More details about this project here: https://makeitbreakitfixit.com/2016/08/30/diy-home-automation-chicken-enclosure/

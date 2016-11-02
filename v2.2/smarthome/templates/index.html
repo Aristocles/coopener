@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<table cellspacing='0'> <!-- cellspacing='0' is important, must stay -->
+
+  <!-- Table Header -->
+  <thead>
+    <tr>
+      <th><div class="heading">Coopener</div></th>
+      <th><a href="http://www.makeitbreakitfixit.com"><img src="{{ url_for('static',filename='icon.png') }}"></a></th>
+      
+    </tr>
+  </thead>
+  <!-- Table Header -->
+
+  <!-- Table Body -->
+  <tbody>
+
+    <tr>
+      <td>Connection Status</td>
+      <td>{% if connstate==True %} Connected: {{ ip }}:{{ port }} {% else %} Not connected {% endif %}</td>
+    </tr><!-- Table Row -->
+
+    <tr class="even">
+      <td>Door Status</td>
+      <td>{% if state %} {{ state }} {% endif %}</td>
+    </tr><!-- Darker Table Row -->
+
+    <tr>
+      <td>Open Time {% if otime %} &nbsp;&nbsp;&nbsp;<font color="red"><b>{{ otime }}</b></font> {% endif %}</td>
+      <td>{% if otimeleft %} {{ otimeleft }} seconds left{% endif %}</td>
+    </tr>
+
+    <tr class="even">
+      <td>Close Time {% if ctime %} &nbsp;&nbsp;&nbsp;<font color="red"><b>{{ ctime }}</b></font> {% endif %}</td>
+      <td>{% if ctimeleft %} {{ ctimeleft }} seconds left{% endif %}</td>
+    </tr>
+
+    <tr>
+      <td colspan="2"><center><button onclick="location.href='http://{{ ip }}:{{ port}}/command?cmd=flip'" class="flip">Flip Door</button></center></td>
+    </tr>
+
+    <tr class="even">
+    <td><button onclick="location.href='http://{{ ip }}:{{ port}}/command?cmd=reconnect'" class="refresh">Reconnect</button></td>
+      <td>
+        <FORM>
+          <INPUT class="refresh" TYPE="button" onClick="history.go(0)" VALUE="Refresh">
+        </FORM>
+      </td>
+    </tr>
+  </tbody>
+  <!-- Table Body -->
+</table>
+
+{% endblock %}
+
