@@ -41,10 +41,11 @@ Coopener Python script will then connect to a centralised Linux server (on the l
 
 The RasPi is running Python3, Flask, mod_wsgi also.
 
-Overview of data flow<br>
+####Overview of data flow<br>
 <img src="https://makeitbreakitfixit.files.wordpress.com/2016/10/flow.jpg"><br>
 
-<br>Example of user interface<br>
+<br>
+####Example of user interface<br>
 <img src="https://makeitbreakitfixit.files.wordpress.com/2016/10/coopener.jpg?w=524&h=932"><br>
 
 
